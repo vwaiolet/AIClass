@@ -97,7 +97,8 @@ else:
 '''
 
 # 위 코드 개선
-# cube == -1 < 0 and 0 < 1 일때 어떻게 할지 생각해보기
+# cube == -1 < 0 and 0 < 1 일때 어떻게 할지 생각해보기(바이너리 서치)
+'''
 cube = int(input('cube : '))
 epsilon = 0.01
 guess = 0.0
@@ -110,4 +111,6 @@ print('num_guesses =', num_guesses)
 if abs(guess**3 - cube) >= epsilon:
     print('Failed on cube root of', cube)
 else:
-    print(guess, 'is close to the cube root of', cube)    
+    print(guess, 'is close to the cube root of', cube)
+'''    
+
