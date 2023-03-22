@@ -11,6 +11,7 @@ Z = [10, 30, 40, 20]
 */
 '''
 
+'''
 X = [10, 20, 20, 20]
 Y = [10, 20, 30, 40]
 Z = [10, 30, 40, 20]
@@ -27,3 +28,4 @@ for i in range(len(X)):
 # 중복 제거
 result = set(map(tuple, RESULT))
 print(result)       
+'''
