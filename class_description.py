@@ -73,11 +73,11 @@ class Student(Person):
     def set_English_score(self, Eng_grade) -> None:
         self.eng_grade = Eng_grade
 
-    # get math score 
+    # get name
     def get_myName(self):
         return self.myname
 
-    # get math score 
+    # get age
     def get_myAge(self):
         return self.myage
 
