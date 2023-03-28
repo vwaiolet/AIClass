@@ -6,7 +6,7 @@
  + bool : True/False
  + None Type : None
  + ```type()``` 이용해서 데이터 타입 확인 가능
-```
+```python
 >>>type(5)
 int
 
@@ -14,7 +14,7 @@ int
 float
 ```
  + 데이터 타입 변환 가능
-```
+```python
 >>>float(3)
  => 3 -> 3.0
  
@@ -23,7 +23,7 @@ float
 ```
 
 ### 콘솔에 출력하기
-```
+```python
 >>>3 + 2
 5
 
@@ -45,13 +45,13 @@ float
  + ```pi_approx = 22/7``` pi_approx 라는 변수에 22/7에 해당하는 값 할당
  + 변수에 값을 할당하면 컴퓨터 메모리에 저장
  + 변수 이름을 이용하여 여러 연산이 가능
-```
+```python
 >>>pi = 3.14
 >>>radius = 2.2
 >>>area = pi * (radius ** 2)
 ```
  + 변수는 값을 변경할 수 있음
-```
+```python
 >>>pi = 3.14
 >>>radius = 2.2
 >>>area = pi * (radius ** 2)
@@ -63,7 +63,7 @@ float
  + ' '나 " "로 묶으면 문자열
  + ex) ```hi = "Hello Python"```
  + 문자열 출력 예시
-```
+```python
 >>>hi = "Hello there"
 >>>name = "Kim"
 >>>greet = hi + " " + name
@@ -73,7 +73,7 @@ Hello there Kim
 
 ### 사용자 입력 받기
  + ```input()``` 이용
-```
+```python
 >>>text = input("Type anything... ")
 >>>print(5 * text)
 ```
@@ -98,7 +98,7 @@ Hello there Kim
 
 ### 조건문
  + 조건에 따라 다른 분기로 실행
-```
+```python
 >>>if <조건>:
 >>>    <코드>
 >>>elif <조건>:
@@ -109,21 +109,21 @@ Hello there Kim
 
 ### while 반복문
  + 조건이 만족할 동안 반복
-```
+```python
 >>>while <조건>:
 >>>    <코드>
 ```
 
 ### for 반복문
  + 지정된 범위 만큼 반복
-```
+```python
 >>>for <변수> in range(<시작, 끝-1, 증가 폭>):
 >>>    <코드>
 ```
 
 ### break문
  + 만나는 즉시 반복문 탈출
-```
+```python
 >>>while <조건>:
 >>>    break
 ```
@@ -131,13 +131,13 @@ Hello there Kim
 ### 문자열2
  + 문자열끼리 비교 연산자로 비교 가능
  + ```len()``` 이용하여 문자열의 길이 반환
-```
+```python
 >>>s = 'abc'
 >>>len(s)
 3
 ```
  + 배열처럼 인덱싱이 가능
-```
+```python
 >>>s = 'abc'
 >>>s[0]
 a
@@ -146,7 +146,7 @@ a
 b
 ```
  + ```[시작:끝-1:증가 폭]``` 형태로 슬라이싱 가능
-```
+```python
 >>>s = 'abcdefgh'
 >>>s[3:6]
 def
@@ -164,7 +164,7 @@ hgfedbca
 ec
 ```
  + 인덱스를 통해 문자 변경이 불가능
-```
+```python
 >>>s = 'hello'
 >>>s[0] = 'y'
 error
@@ -176,7 +176,7 @@ error
 
 ### 함수
  + 재사용 할 수 있고 호출하여 사용하는 코드
-```
+```python
 >>>def <name>(<parameter>):
 >>>    <code>
 >>>
