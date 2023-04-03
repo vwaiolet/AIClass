@@ -22,11 +22,16 @@ class TextTableFormatter(TableFormatter):
     '''
     def headings(self, headers):
         # your code here
-
+        for h in headers:
+            print(f'{h:>10s}', end=' ')
+        print()
+        print(('-' * 10 + ' ') * len(headers))
 
     def row(self, rowdata):
         # your code here
-
+        for r in rowdata:
+            print(f'{r:>10s}', end=' ')
+        print()
 
 class CSVTableFormatter(TableFormatter):
     '''
@@ -34,8 +39,11 @@ class CSVTableFormatter(TableFormatter):
     '''
     def headings(self, headers):
         # your code here
+        print(','.join(headers))
+
     def row(self, rowdata):
         # your code here
+        print(','.join(rowdata))
 
 class HTMLTableFormatter(TableFormatter):
     '''
@@ -43,9 +51,17 @@ class HTMLTableFormatter(TableFormatter):
     '''
     def headings(self, headers):
         # your code here
+        print('<tr>', end='')
+        for h in headers:
+            print(f'<th>{h}</th>', end='')
+        print('</tr>')
 
     def row(self, rowdata):
         # your code here
+        print('<tr>', end='')
+        for r in rowdata:
+            print(f'<td>{r}</td>', end='')
+        print('</tr>')
 
 class FormatError(Exception):
     pass
