@@ -1,7 +1,8 @@
 class ListNode:
-    def __init__(self, newItem, nextNode:'ListNode'):
+    def __init__(self, newItem, nextNode: 'ListNode'):
         self.item = newItem
         self.next = nextNode
+
 
 class LinkedList:
     def __init__(self):
@@ -9,27 +10,27 @@ class LinkedList:
         self.__numItems = 0
 
     # i번째 인덱스에 newItem 삽입
-    def insert(self, i:int, newItem):
-        prev = self.__getNode(i-1)
+    def insert(self, i: int, newItem):
+        prev = self.__getNode(i - 1)
         newNode = ListNode(newItem, prev.next)
         prev.next = newNode
         self.__numItems += 1
 
     # 맨 뒤에 newItem 삽입
     def append(self, newItem):
-        prev = self.__getNode(self.__numItems-1)
+        prev = self.__getNode(self.__numItems - 1)
         newNode = ListNode(newItem, prev.next)
         prev.next = newNode
         self.__numItems += 1
 
     # i번째 인덱스 삭제하고 알려줌
-    def pop(self, i:int):   # i번 노드 삭제. 고정 파라미터
-        prev = self.__getNode(i-1)
+    def pop(self, i: int):  # i번 노드 삭제. 고정 파라미터
+        prev = self.__getNode(i - 1)
         current = prev.next
         prev.next = current.next
         retItem = current.item
         self.__numItems -= 1
-        return  retItem
+        return retItem
 
     # 처음으로 나타나는 x 삭제
     def remove(self, x):
@@ -42,7 +43,7 @@ class LinkedList:
             return None
 
     # i번째 인덱스의 값 알려줌
-    def get(self, i:int):
+    def get(self, i: int):
         return self.__getNode(i).item
 
     # x가 몇번째 인덱스인지 알려줌
@@ -54,14 +55,14 @@ class LinkedList:
                 return i
             else:
                 current = current.next
-    
+
     # 리스트가 비어있는지 확인
     def isEmpty(self) -> bool:
         if self.__head is None:
             return True
         else:
             return False
-    
+
     # 리스트의 크기 반환
     def size(self) -> int:
         return self.__numItems
@@ -84,7 +85,7 @@ class LinkedList:
         return count
 
     # a(리스트)를 풀어서 리스트에 추가
-    def extend(self, a): # 여기서 a는 self와 같은 타입의 리스트
+    def extend(self, a):  # 여기서 a는 self와 같은 타입의 리스트
         for i in range(a.size()):
             self.append(a.get(i))
 
@@ -101,8 +102,8 @@ class LinkedList:
         for i in range(self.__numItems):
             L.insert(0, self.get(i))
         self.clear()
-        for idx in range(L.size()):
-            self.append(L.get(idx))
+        for i in range(L.size()):
+            self.append(L.get(i))
 
     # 리스트 정렬
     def sort(self) -> None:
@@ -121,13 +122,14 @@ class LinkedList:
             if current.item == x:
                 return (prev, current)
             else:
-                prev = current; current = current.next
+                prev = current
+                current = current.next
         return (None, None)
 
     # 리스트의 i번 노드 알려줌
-    def __getNode(self, i:int) -> ListNode:
+    def __getNode(self, i: int) -> ListNode:
         current = self.__head
-        for idx in range(i+1):
+        for idx in range(i + 1):
             current = current.next
 
         return current
@@ -140,9 +142,7 @@ class LinkedList:
             current = current.next
 
 
-
-
-#LinkedList Test
+# LinkedList Test
 
 list = LinkedList()
 list.append(30)
